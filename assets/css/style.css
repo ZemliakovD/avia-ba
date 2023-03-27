@@ -698,3 +698,151 @@ input.input-at:focus {
     text-transform: none;
     margin: 0 auto;
 }
+
+@media (max-width: 370px) {
+    .main{
+        margin-bottom: 0;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+
+    .info-title{
+        font-size: 30px;
+        line-height: 39px;
+        margin-bottom: 20px;
+    }
+
+    .info-text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .button-panels{
+        flex-direction: column;
+    }
+
+    .info-button{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .info-banner{
+        background-position: left;
+        background-size: contain;
+        min-width: 702px;
+        min-height: 395px;
+        position: inherit;
+        margin: -20px 0 0 -45px;
+    }
+
+    .services{
+        margin-bottom: 0;
+    }
+
+    .services-text{
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .subtitle{
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0.15em;
+    }
+
+    .services-title{    
+        margin-bottom: 20px;
+    }
+
+    .sevices-description{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 280px;
+    }
+
+    .services-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .services-tab-inner{
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+    }
+
+    .services-tab-title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        font-family: 'Inter';
+        margin-bottom: 20px;
+    }
+
+    .secrvices-tab-icon img {
+        width: 250px;
+    }
+
+    .services-nav-tabs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-tabs .nav-link{
+        max-width: 100%;
+    }
+
+
+
+}
+
+
+@media (max-width: 576x) {
+    .main{
+        margin-bottom: 0;
+    }
+
+    .info{
+        flex-direction: column;
+    }
+
+    .info-title{
+        font-size: 30px;
+        line-height: 39px;
+        margin-bottom: 20px;
+    }
+
+    .info-text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .button-panels{
+        flex-direction: column;
+    }
+
+    .info-button{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .info-banner{
+        background-position: left;
+        background-size: contain;
+        min-width: 702px;
+        min-height: 395px;
+        position: inherit;
+        margin: -20px 0 0 -45px;
+    }
+}
+
+/* Малые девайсы («ландшафтные», < 768px) */
+@media (max-width: 768px) { ... }
+
+/* Средние девайсы («таблетки», < 992px)  */
+@media (max-width: 992px) { ... }
+
+/* Большие девайсы (большие десктопы, < 1200px) */
+@media (max-width: 1200px) { ... }
