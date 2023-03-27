@@ -1,52 +1,52 @@
-$(function(){
+$(function () {
     $('.partners-slider').slick({
         dots: false,
         infinite: true,
-        autoplay:true,
+        autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="partners-prev">Previous</button>',
         nextArrow: '<button type="button" class="partners-next">Next</button>'
-      });
+    });
 });
 
 
-$(function() {
-    $('.forma').each(function() {    
+$(function () {
+    $('.forma').each(function () {
         var $frm = $(this);
         var input = $(this).find('.validate-input-at .input-at');
         var butsend = $(this).find('.form-at-btn');
-        butsend.on('click',function(){
+        butsend.on('click', function () {
             var check = true;
-            for(var i=0; i<input.length; i++) {
-                if(validate(input[i]) == false){
+            for (var i = 0; i < input.length; i++) {
+                if (validate(input[i]) == false) {
                     showValidate(input[i]);
-                    check=false;
+                    check = false;
                 }
             }
             // Отправка формы        
             if (check == true) {
                 $.post("../php/send.php", $frm.find(".form-at select, .form-at input, .form-at textarea").serialize(),
-                    function(data){
-                        if(data.frm_check == 'error'){ 
-                            $frm.find(".result-at").html("<div class='error-at'>Ошибка: " + data.msg + "</div>");                    
-                            } else {
-                            $frm.find(".result-at").html("<div class='success-at'>Ваше сообщение отправлено!</div>"); 
+                    function (data) {
+                        if (data.frm_check == 'error') {
+                            $frm.find(".result-at").html("<div class='error-at'>Ошибка: " + data.msg + "</div>");
+                        } else {
+                            $frm.find(".result-at").html("<div class='success-at'>Ваше сообщение отправлено!</div>");
                             $frm.find(".form-at").fadeOut(500);
-                            $frm.find(".input-at").val("");            
+                            $frm.find(".input-at").val("");
                         }
                     }, "json");
-                    return false;
+                return false;
             }
         });
-        $('.form-at .input-at').each(function(){
-            $(this).focus(function(){
+        $('.form-at .input-at').each(function () {
+            $(this).focus(function () {
                 hideValidate(this);
             });
         });
-        
-    });    
+
+    });
     function validate(input) {
         /* Если нужно проверять валидность почты, раскомментируйте строчки ниже */
         /*
@@ -56,7 +56,7 @@ $(function() {
             }
             }
         */
-        if($(input).val().trim() == ''){
+        if ($(input).val().trim() == '') {
             return false;
         }
     }
@@ -68,4 +68,22 @@ $(function() {
         var thisAlert = $(input).parent();
         $(thisAlert).removeClass('alert-validate');
     }
+});
+
+$("#expertise").click(function () { // ID откуда кливаем
+    $('html, body').animate({
+        scrollTop: $(".services").offset().top // класс объекта к которому приезжаем
+    }, 1000); // Скорость прокрутки
+});
+
+$("#partners").click(function () { // ID откуда кливаем
+    $('html, body').animate({
+        scrollTop: $(".partners").offset().top // класс объекта к которому приезжаем
+    }, 1000); // Скорость прокрутки
+});
+
+$("#careers").click(function () { // ID откуда кливаем
+    $('html, body').animate({
+        scrollTop: $(".careers").offset().top // класс объекта к которому приезжаем
+    }, 1000); // Скорость прокрутки
 });
