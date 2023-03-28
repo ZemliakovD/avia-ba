@@ -155,15 +155,17 @@ a {
 
 .info-content {
     z-index: 1;
-    width: 40%;
+    width: 50%;
+    margin-right: 40px;
 }
 
 .info-banner {
-    width: 60%;
+    width: 50%;
 }
 
 .info-banner img {
-    width: 110%;
+    width: 80%;
+    border-radius: 25px;
 }
 
 .info-content::before {
@@ -1063,6 +1065,7 @@ input.input-at:focus {
 
     .info-content {
         width: 100%;
+        margin-bottom: 25px;
     }
 
     .info-content::before {
@@ -1074,7 +1077,9 @@ input.input-at:focus {
     }
 
     .info-banner img {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
+        display: block;
     }
 
     .info-title {
@@ -1262,7 +1267,226 @@ input.input-at:focus {
 
 /* Малые девайсы («ландшафтные», < 768px) */
 @media (max-width: 768px) {
-    ...
+    .main {
+        margin-bottom: 0;
+    }
+
+    .header-inner {
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .menu-item{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        flex-direction: column;
+        padding: 50px 20px 60px 20px;
+    }
+
+    .info-content {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .info-content::before {
+        width: 225px;
+    }
+
+    .info-banner {
+        width: 100%;
+    }
+
+    .info-banner img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .info-title {
+        font-size: 30px;
+        line-height: 39px;
+        margin-bottom: 20px;
+    }
+
+    .info-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .button-panels {
+        flex-direction: column;
+    }
+
+    .info-button {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .services {
+        margin-bottom: 0;
+    }
+
+    .services-inner {
+        padding: 40px 20px;
+    }
+
+    .services-text {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: 0.15em;
+    }
+
+    .services-title {
+        margin-bottom: 20px;
+    }
+
+    .sevices-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 280px;
+    }
+
+    .services-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .services-tab-inner {
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+    }
+
+    .services-tab-content h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        font-family: 'Inter';
+    }
+
+    .secrvices-tab-icon img {
+        width: 250px;
+    }
+
+    .services-nav-tabs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-tabs .nav-link {
+        max-width: 100%;
+    }
+
+    .partners {
+        margin-bottom: 0;
+    }
+
+    .partners-inner {
+        padding: 40px 20px 60px 20px;
+    }
+
+    .partners-text {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .partners-title {
+        margin-bottom: 20px;
+    }
+
+    .partners-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 280px;
+    }
+
+    .partners-info {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .partners-item {
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .careers-inner {
+        flex-direction: column;
+        padding: 40px 20px 60px 20px;
+    }
+
+    .careers-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .careers-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 280px;
+    }
+
+    .careers-content {
+        width: 100%;
+    }
+
+    .careers-content-inner {
+        padding: 60px 10px;
+    }
+
+    .careers-content-inner {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .careers-content-inner p {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .footer-inner {
+        padding: 40px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: unset;
+        margin-bottom: 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .footer-bottom-text {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-text:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* Средние девайсы («таблетки», < 992px)  */
